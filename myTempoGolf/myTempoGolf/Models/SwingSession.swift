@@ -2,7 +2,7 @@ import Foundation
 
 // Simple session model without Core Data for now
 struct SwingSession: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     let date: Date
     let swingCount: Int
     let duration: TimeInterval
@@ -12,6 +12,7 @@ struct SwingSession: Identifiable, Codable {
     let consistencyScore: Double
     
     init(swingCount: Int, duration: TimeInterval, settings: TempoSettings, consistencyScore: Double = 0.0) {
+        self.id = UUID()
         self.date = Date()
         self.swingCount = swingCount
         self.duration = duration
