@@ -2,6 +2,12 @@ import Foundation
 import AVFoundation
 import Combine
 
+enum MetronomeSound {
+    case tick   // Takeaway - crisp, light tick
+    case tock   // Pause - deeper, warmer tock  
+    case tack   // Impact - bright, prominent tack
+}
+
 class AudioManager: ObservableObject {
     @Published var isEnabled: Bool = true
     @Published var volume: Float = 0.7
@@ -78,7 +84,7 @@ class AudioManager: ObservableObject {
         }
     }
     
-    private func createToneBuffer(frequency: Double, duration: Double, amplitude: Double = 0.5) -> AVAudioPCMBuffer? {
+    private func createMetronomeBuffer(type: MetronomeSound, duration: Double, amplitude: Double = 0.5) -> AVAudioPCMBuffer? {
         let sampleRate = 44100.0
         let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1)!
         let frameCount = AVAudioFrameCount(sampleRate * duration)
@@ -95,21 +101,73 @@ class AudioManager: ObservableObject {
             return nil
         }
         
-        let angularFrequency = 2.0 * Double.pi * frequency / sampleRate
         let volumeAmplitude = amplitude * Double(volume)
         
-        for i in 0..<Int(frameCount) {
-            let sample = sin(angularFrequency * Double(i)) * volumeAmplitude
-            channelData[i] = Float(sample)
+        switch type {
+        case .tick:
+            // Sharp, crisp tick sound - high frequency with quick decay
+            createTickSound(channelData: channelData, frameCount: Int(frameCount), sampleRate: sampleRate, amplitude: volumeAmplitude)
+        case .tock:
+            // Deeper, warmer tock sound - lower frequency
+            createTockSound(channelData: channelData, frameCount: Int(frameCount), sampleRate: sampleRate, amplitude: volumeAmplitude)
+        case .tack:
+            // Sharp accent sound - bright and prominent
+            createTackSound(channelData: channelData, frameCount: Int(frameCount), sampleRate: sampleRate, amplitude: volumeAmplitude)
         }
         
-        print("✅ Created tone buffer: \(frequency)Hz, \(duration)s")
+        print("✅ Created metronome buffer: \(type), \(duration)s")
         return buffer
     }
     
-    private func playTone(frequency: Double, duration: Double = 0.15, amplitude: Double = 0.5) {
+    private func createTickSound(channelData: UnsafeMutablePointer<Float>, frameCount: Int, sampleRate: Double, amplitude: Double) {
+        // High-pitched click with exponential decay - like a wooden metronome tick
+        let baseFreq = 1200.0
+        let angularFreq = 2.0 * Double.pi * baseFreq / sampleRate
+        
+        for i in 0..<frameCount {
+            let t = Double(i) / sampleRate
+            let decay = exp(-t * 15.0) // Quick decay
+            let sine = sin(angularFreq * Double(i))
+            let noise = (Double.random(in: -0.1...0.1)) // Slight noise for realism
+            let sample = (sine + noise) * decay * amplitude * 0.8
+            channelData[i] = Float(sample)
+        }
+    }
+    
+    private func createTockSound(channelData: UnsafeMutablePointer<Float>, frameCount: Int, sampleRate: Double, amplitude: Double) {
+        // Lower, warmer sound with longer sustain
+        let baseFreq = 800.0
+        let angularFreq = 2.0 * Double.pi * baseFreq / sampleRate
+        
+        for i in 0..<frameCount {
+            let t = Double(i) / sampleRate
+            let decay = exp(-t * 8.0) // Slower decay than tick
+            let sine = sin(angularFreq * Double(i))
+            let harmonics = 0.3 * sin(angularFreq * Double(i) * 2.0) // Add some harmonics
+            let sample = (sine + harmonics) * decay * amplitude * 0.9
+            channelData[i] = Float(sample)
+        }
+    }
+    
+    private func createTackSound(channelData: UnsafeMutablePointer<Float>, frameCount: Int, sampleRate: Double, amplitude: Double) {
+        // Bright, attention-grabbing sound for impact
+        let baseFreq = 1600.0
+        let angularFreq = 2.0 * Double.pi * baseFreq / sampleRate
+        
+        for i in 0..<frameCount {
+            let t = Double(i) / sampleRate
+            let decay = exp(-t * 12.0)
+            let sine = sin(angularFreq * Double(i))
+            let harmonics = 0.4 * sin(angularFreq * Double(i) * 1.5) // Brighter harmonics
+            let click = t < 0.005 ? sin(angularFreq * Double(i) * 4.0) * 0.2 : 0 // Initial click
+            let sample = (sine + harmonics + click) * decay * amplitude
+            channelData[i] = Float(sample)
+        }
+    }
+    
+    private func playMetronomeSound(_ sound: MetronomeSound, duration: Double = 0.15, amplitude: Double = 0.5) {
         guard isEnabled else {
-            print("🔇 Audio disabled, skipping tone")
+            print("🔇 Audio disabled, skipping metronome sound")
             return
         }
         
@@ -118,8 +176,8 @@ class AudioManager: ObservableObject {
             return
         }
         
-        guard let buffer = createToneBuffer(frequency: frequency, duration: duration, amplitude: amplitude) else {
-            print("❌ Failed to create tone buffer")
+        guard let buffer = createMetronomeBuffer(type: sound, duration: duration, amplitude: amplitude) else {
+            print("❌ Failed to create metronome buffer")
             return
         }
         
@@ -131,24 +189,66 @@ class AudioManager: ObservableObject {
             player.scheduleBuffer(buffer, at: nil, options: [], completionHandler: nil)
             player.play()
             
-            print("🔊 Playing tone: \(frequency)Hz")
+            print("🔊 Playing metronome sound: \(sound)")
         }
     }
     
-    // Fred Couples signature audio cues
+    // Legacy function for test audio - keep simple tone
+    private func playTone(frequency: Double, duration: Double = 0.15, amplitude: Double = 0.5) {
+        guard isEnabled else {
+            print("🔇 Audio disabled, skipping tone")
+            return
+        }
+        
+        guard let engine = audioEngine, let player = playerNode, engine.isRunning else {
+            print("❌ Audio engine not running")
+            return
+        }
+        
+        // Create simple sine wave for test audio
+        let sampleRate = 44100.0
+        let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1)!
+        let frameCount = AVAudioFrameCount(sampleRate * duration)
+        
+        guard let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: frameCount) else { return }
+        buffer.frameLength = frameCount
+        
+        guard let channelData = buffer.floatChannelData?[0] else { return }
+        
+        let angularFrequency = 2.0 * Double.pi * frequency / sampleRate
+        let volumeAmplitude = amplitude * Double(volume)
+        
+        for i in 0..<Int(frameCount) {
+            let sample = sin(angularFrequency * Double(i)) * volumeAmplitude
+            channelData[i] = Float(sample)
+        }
+        
+        DispatchQueue.main.async {
+            if player.isPlaying {
+                player.stop()
+            }
+            
+            player.scheduleBuffer(buffer, at: nil, options: [], completionHandler: nil)
+            player.play()
+            
+            print("🔊 Playing test tone: \(frequency)Hz")
+        }
+    }
+    
+    // Fred Couples signature metronome cues
     func playTakeawayTone() {
-        print("🏌️ Takeaway tone")
-        playTone(frequency: 440, duration: 0.1, amplitude: 0.4) // Low A note
+        print("🏌️ Takeaway tick")
+        playMetronomeSound(.tick, duration: 0.1, amplitude: 0.6)
     }
     
     func playTopTone() {
-        print("⏸️ Top/Pause tone")
-        playTone(frequency: 880, duration: 0.15, amplitude: 0.6) // High A note
+        print("⏸️ Top/Pause tock")
+        playMetronomeSound(.tock, duration: 0.15, amplitude: 0.7)
     }
     
     func playImpactTone() {
-        print("💥 Impact tone")
-        playTone(frequency: 1760, duration: 0.2, amplitude: 0.8) // Very high A note
+        print("💥 Impact tack")
+        playMetronomeSound(.tack, duration: 0.2, amplitude: 0.8)
     }
     
     // Test function to verify audio works
