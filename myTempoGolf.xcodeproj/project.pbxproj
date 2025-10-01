@@ -6,63 +6,129 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		21CFDAD42E8BA5F80003CCC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 21CFDABE2E8BA5F60003CCC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 21CFDAC52E8BA5F60003CCC4;
-			remoteInfo = myTempoGolf;
+/* Begin PBXBuildRule section */
+		213E17172E8D12E300B45E6F /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
-		21CFDADE2E8BA5F80003CCC4 /* PBXContainerItemProxy */ = {
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		213E16EC2E8D0FA800B45E6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 21CFDABE2E8BA5F60003CCC4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 21CFDAC52E8BA5F60003CCC4;
-			remoteInfo = myTempoGolf;
+			remoteGlobalIDString = 213E16DE2E8D0FA700B45E6F;
+			remoteInfo = mytemposwing;
+		};
+		213E16F62E8D0FA800B45E6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21CFDABE2E8BA5F60003CCC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 213E16DE2E8D0FA700B45E6F;
+			remoteInfo = mytemposwing;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21CFDAC62E8BA5F60003CCC4 /* myTempoGolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTempoGolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		21CFDAD32E8BA5F80003CCC4 /* myTempoGolfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTempoGolfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		21CFDADD2E8BA5F80003CCC4 /* myTempoGolfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTempoGolfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		213E16DF2E8D0FA700B45E6F /* mytemposwing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mytemposwing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		213E16EB2E8D0FA800B45E6F /* mytemposwingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mytemposwingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		213E16F52E8D0FA800B45E6F /* mytemposwingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mytemposwingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		213E17122E8D125F00B45E6F /* Exceptions for "myTempoGolf" folder in "mytemposwing" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				myTempoGolf/ContentView.swift,
+				myTempoGolf/Models/SwingSession.swift,
+				myTempoGolf/Models/TempoSettings.swift,
+				myTempoGolf/MyTempoGolfApp.swift,
+				myTempoGolf/Utilities/AudioManager.swift,
+				myTempoGolf/Utilities/HapticManager.swift,
+				myTempoGolf/ViewModels/SettingsViewModel.swift,
+				myTempoGolf/ViewModels/TempoViewModel.swift,
+			);
+			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
+		};
+		213E17142E8D125F00B45E6F /* Exceptions for "myTempoGolfTests" folder in "mytemposwing" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				myTempoGolfTests.swift,
+			);
+			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
+		};
+		213E17152E8D125F00B45E6F /* Exceptions for "myTempoGolfUITests" folder in "mytemposwing" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				myTempoGolfUITests.swift,
+				myTempoGolfUITestsLaunchTests.swift,
+			);
+			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		213E17132E8D125F00B45E6F /* Exceptions for "myTempoGolf" folder in "Compile Sources" phase from "mytemposwing" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 213E16DB2E8D0FA700B45E6F /* Sources */;
+			membershipExceptions = (
+				myTempoGolf/Assets.xcassets,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		21CFDAC82E8BA5F60003CCC4 /* myTempoGolf */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				213E17122E8D125F00B45E6F /* Exceptions for "myTempoGolf" folder in "mytemposwing" target */,
+				213E17132E8D125F00B45E6F /* Exceptions for "myTempoGolf" folder in "Compile Sources" phase from "mytemposwing" target */,
+			);
 			path = myTempoGolf;
 			sourceTree = "<group>";
 		};
 		21CFDAD62E8BA5F80003CCC4 /* myTempoGolfTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				213E17142E8D125F00B45E6F /* Exceptions for "myTempoGolfTests" folder in "mytemposwing" target */,
+			);
 			path = myTempoGolfTests;
 			sourceTree = "<group>";
 		};
 		21CFDAE02E8BA5F80003CCC4 /* myTempoGolfUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				213E17152E8D125F00B45E6F /* Exceptions for "myTempoGolfUITests" folder in "mytemposwing" target */,
+			);
 			path = myTempoGolfUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		21CFDAC32E8BA5F60003CCC4 /* Frameworks */ = {
+		213E16DC2E8D0FA700B45E6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21CFDAD02E8BA5F80003CCC4 /* Frameworks */ = {
+		213E16E82E8D0FA800B45E6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21CFDADA2E8BA5F80003CCC4 /* Frameworks */ = {
+		213E16F22E8D0FA800B45E6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,9 +151,9 @@
 		21CFDAC72E8BA5F60003CCC4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21CFDAC62E8BA5F60003CCC4 /* myTempoGolf.app */,
-				21CFDAD32E8BA5F80003CCC4 /* myTempoGolfTests.xctest */,
-				21CFDADD2E8BA5F80003CCC4 /* myTempoGolfUITests.xctest */,
+				213E16DF2E8D0FA700B45E6F /* mytemposwing.app */,
+				213E16EB2E8D0FA800B45E6F /* mytemposwingTests.xctest */,
+				213E16F52E8D0FA800B45E6F /* mytemposwingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,72 +161,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		21CFDAC52E8BA5F60003CCC4 /* myTempoGolf */ = {
+		213E16DE2E8D0FA700B45E6F /* mytemposwing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21CFDAE72E8BA5F80003CCC4 /* Build configuration list for PBXNativeTarget "myTempoGolf" */;
+			buildConfigurationList = 213E16FD2E8D0FA800B45E6F /* Build configuration list for PBXNativeTarget "mytemposwing" */;
 			buildPhases = (
-				21CFDAC22E8BA5F60003CCC4 /* Sources */,
-				21CFDAC32E8BA5F60003CCC4 /* Frameworks */,
-				21CFDAC42E8BA5F60003CCC4 /* Resources */,
+				213E16DB2E8D0FA700B45E6F /* Sources */,
+				213E16DC2E8D0FA700B45E6F /* Frameworks */,
+				213E16DD2E8D0FA700B45E6F /* Resources */,
 			);
 			buildRules = (
+				213E17172E8D12E300B45E6F /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				21CFDAC82E8BA5F60003CCC4 /* myTempoGolf */,
-			);
-			name = myTempoGolf;
+			name = mytemposwing;
 			packageProductDependencies = (
 			);
-			productName = myTempoGolf;
-			productReference = 21CFDAC62E8BA5F60003CCC4 /* myTempoGolf.app */;
+			productName = mytemposwing;
+			productReference = 213E16DF2E8D0FA700B45E6F /* mytemposwing.app */;
 			productType = "com.apple.product-type.application";
 		};
-		21CFDAD22E8BA5F80003CCC4 /* myTempoGolfTests */ = {
+		213E16EA2E8D0FA800B45E6F /* mytemposwingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21CFDAEA2E8BA5F80003CCC4 /* Build configuration list for PBXNativeTarget "myTempoGolfTests" */;
+			buildConfigurationList = 213E17002E8D0FA800B45E6F /* Build configuration list for PBXNativeTarget "mytemposwingTests" */;
 			buildPhases = (
-				21CFDACF2E8BA5F80003CCC4 /* Sources */,
-				21CFDAD02E8BA5F80003CCC4 /* Frameworks */,
-				21CFDAD12E8BA5F80003CCC4 /* Resources */,
+				213E16E72E8D0FA800B45E6F /* Sources */,
+				213E16E82E8D0FA800B45E6F /* Frameworks */,
+				213E16E92E8D0FA800B45E6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				21CFDAD52E8BA5F80003CCC4 /* PBXTargetDependency */,
+				213E16ED2E8D0FA800B45E6F /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				21CFDAD62E8BA5F80003CCC4 /* myTempoGolfTests */,
-			);
-			name = myTempoGolfTests;
+			name = mytemposwingTests;
 			packageProductDependencies = (
 			);
-			productName = myTempoGolfTests;
-			productReference = 21CFDAD32E8BA5F80003CCC4 /* myTempoGolfTests.xctest */;
+			productName = mytemposwingTests;
+			productReference = 213E16EB2E8D0FA800B45E6F /* mytemposwingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		21CFDADC2E8BA5F80003CCC4 /* myTempoGolfUITests */ = {
+		213E16F42E8D0FA800B45E6F /* mytemposwingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21CFDAED2E8BA5F80003CCC4 /* Build configuration list for PBXNativeTarget "myTempoGolfUITests" */;
+			buildConfigurationList = 213E17032E8D0FA800B45E6F /* Build configuration list for PBXNativeTarget "mytemposwingUITests" */;
 			buildPhases = (
-				21CFDAD92E8BA5F80003CCC4 /* Sources */,
-				21CFDADA2E8BA5F80003CCC4 /* Frameworks */,
-				21CFDADB2E8BA5F80003CCC4 /* Resources */,
+				213E16F12E8D0FA800B45E6F /* Sources */,
+				213E16F22E8D0FA800B45E6F /* Frameworks */,
+				213E16F32E8D0FA800B45E6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				21CFDADF2E8BA5F80003CCC4 /* PBXTargetDependency */,
+				213E16F72E8D0FA800B45E6F /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				21CFDAE02E8BA5F80003CCC4 /* myTempoGolfUITests */,
-			);
-			name = myTempoGolfUITests;
+			name = mytemposwingUITests;
 			packageProductDependencies = (
 			);
-			productName = myTempoGolfUITests;
-			productReference = 21CFDADD2E8BA5F80003CCC4 /* myTempoGolfUITests.xctest */;
+			productName = mytemposwingUITests;
+			productReference = 213E16F52E8D0FA800B45E6F /* mytemposwingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -173,16 +231,16 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					21CFDAC52E8BA5F60003CCC4 = {
+					213E16DE2E8D0FA700B45E6F = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					21CFDAD22E8BA5F80003CCC4 = {
+					213E16EA2E8D0FA800B45E6F = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 21CFDAC52E8BA5F60003CCC4;
+						TestTargetID = 213E16DE2E8D0FA700B45E6F;
 					};
-					21CFDADC2E8BA5F80003CCC4 = {
+					213E16F42E8D0FA800B45E6F = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 21CFDAC52E8BA5F60003CCC4;
+						TestTargetID = 213E16DE2E8D0FA700B45E6F;
 					};
 				};
 			};
@@ -200,29 +258,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21CFDAC52E8BA5F60003CCC4 /* myTempoGolf */,
-				21CFDAD22E8BA5F80003CCC4 /* myTempoGolfTests */,
-				21CFDADC2E8BA5F80003CCC4 /* myTempoGolfUITests */,
+				213E16DE2E8D0FA700B45E6F /* mytemposwing */,
+				213E16EA2E8D0FA800B45E6F /* mytemposwingTests */,
+				213E16F42E8D0FA800B45E6F /* mytemposwingUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		21CFDAC42E8BA5F60003CCC4 /* Resources */ = {
+		213E16DD2E8D0FA700B45E6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21CFDAD12E8BA5F80003CCC4 /* Resources */ = {
+		213E16E92E8D0FA800B45E6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21CFDADB2E8BA5F80003CCC4 /* Resources */ = {
+		213E16F32E8D0FA800B45E6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +290,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21CFDAC22E8BA5F60003CCC4 /* Sources */ = {
+		213E16DB2E8D0FA700B45E6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21CFDACF2E8BA5F80003CCC4 /* Sources */ = {
+		213E16E72E8D0FA800B45E6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21CFDAD92E8BA5F80003CCC4 /* Sources */ = {
+		213E16F12E8D0FA800B45E6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,19 +314,157 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		21CFDAD52E8BA5F80003CCC4 /* PBXTargetDependency */ = {
+		213E16ED2E8D0FA800B45E6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21CFDAC52E8BA5F60003CCC4 /* myTempoGolf */;
-			targetProxy = 21CFDAD42E8BA5F80003CCC4 /* PBXContainerItemProxy */;
+			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
+			targetProxy = 213E16EC2E8D0FA800B45E6F /* PBXContainerItemProxy */;
 		};
-		21CFDADF2E8BA5F80003CCC4 /* PBXTargetDependency */ = {
+		213E16F72E8D0FA800B45E6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21CFDAC52E8BA5F60003CCC4 /* myTempoGolf */;
-			targetProxy = 21CFDADE2E8BA5F80003CCC4 /* PBXContainerItemProxy */;
+			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
+			targetProxy = 213E16F62E8D0FA800B45E6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		213E16FE2E8D0FA800B45E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G563952Z46;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytemposwing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		213E16FF2E8D0FA800B45E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G563952Z46;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSBackgroundOnly = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytemposwing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		213E17012E8D0FA800B45E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G563952Z46;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytemposwingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mytemposwing.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mytemposwing";
+			};
+			name = Debug;
+		};
+		213E17022E8D0FA800B45E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G563952Z46;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytemposwingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mytemposwing.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mytemposwing";
+			};
+			name = Release;
+		};
+		213E17042E8D0FA800B45E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G563952Z46;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytemposwingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mytemposwing;
+			};
+			name = Debug;
+		};
+		213E17052E8D0FA800B45E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G563952Z46;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytemposwingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mytemposwing;
+			};
+			name = Release;
+		};
 		21CFDAE52E8BA5F80003CCC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -390,179 +586,41 @@
 			};
 			name = Release;
 		};
-		21CFDAE82E8BA5F80003CCC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G563952Z46;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytempogolf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		21CFDAE92E8BA5F80003CCC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G563952Z46;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.mytempogolf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		21CFDAEB2E8BA5F80003CCC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G563952Z46;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.myTempoGolfTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myTempoGolf.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/myTempoGolf";
-			};
-			name = Debug;
-		};
-		21CFDAEC2E8BA5F80003CCC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G563952Z46;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.myTempoGolfTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myTempoGolf.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/myTempoGolf";
-			};
-			name = Release;
-		};
-		21CFDAEE2E8BA5F80003CCC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G563952Z46;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.myTempoGolfUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = myTempoGolf;
-			};
-			name = Debug;
-		};
-		21CFDAEF2E8BA5F80003CCC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G563952Z46;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrispritchard.myTempoGolfUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = myTempoGolf;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		213E16FD2E8D0FA800B45E6F /* Build configuration list for PBXNativeTarget "mytemposwing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				213E16FE2E8D0FA800B45E6F /* Debug */,
+				213E16FF2E8D0FA800B45E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		213E17002E8D0FA800B45E6F /* Build configuration list for PBXNativeTarget "mytemposwingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				213E17012E8D0FA800B45E6F /* Debug */,
+				213E17022E8D0FA800B45E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		213E17032E8D0FA800B45E6F /* Build configuration list for PBXNativeTarget "mytemposwingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				213E17042E8D0FA800B45E6F /* Debug */,
+				213E17052E8D0FA800B45E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21CFDAC12E8BA5F60003CCC4 /* Build configuration list for PBXProject "myTempoGolf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21CFDAE52E8BA5F80003CCC4 /* Debug */,
 				21CFDAE62E8BA5F80003CCC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21CFDAE72E8BA5F80003CCC4 /* Build configuration list for PBXNativeTarget "myTempoGolf" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21CFDAE82E8BA5F80003CCC4 /* Debug */,
-				21CFDAE92E8BA5F80003CCC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21CFDAEA2E8BA5F80003CCC4 /* Build configuration list for PBXNativeTarget "myTempoGolfTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21CFDAEB2E8BA5F80003CCC4 /* Debug */,
-				21CFDAEC2E8BA5F80003CCC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		21CFDAED2E8BA5F80003CCC4 /* Build configuration list for PBXNativeTarget "myTempoGolfUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				21CFDAEE2E8BA5F80003CCC4 /* Debug */,
-				21CFDAEF2E8BA5F80003CCC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
