@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "21CFDAC52E8BA5F60003CCC4"
-               BuildableName = "myTempoGolf.app"
-               BlueprintName = "myTempoGolf"
+               BlueprintIdentifier = "213E16DE2E8D0FA700B45E6F"
+               BuildableName = "mytemposwing.app"
+               BlueprintName = "mytemposwing"
                ReferencedContainer = "container:myTempoGolf.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -64,16 +64,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21CFDAC52E8BA5F60003CCC4"
-            BuildableName = "myTempoGolf.app"
-            BlueprintName = "myTempoGolf"
-            ReferencedContainer = "container:myTempoGolf.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -81,16 +71,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "21CFDAC52E8BA5F60003CCC4"
-            BuildableName = "myTempoGolf.app"
-            BlueprintName = "myTempoGolf"
+            BlueprintIdentifier = "213E16DE2E8D0FA700B45E6F"
+            BuildableName = "mytemposwing.app"
+            BlueprintName = "mytemposwing"
             ReferencedContainer = "container:myTempoGolf.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
