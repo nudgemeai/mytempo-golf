@@ -58,21 +58,6 @@
 			);
 			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
 		};
-		213E17142E8D125F00B45E6F /* Exceptions for "myTempoGolfTests" folder in "mytemposwing" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				myTempoGolfTests.swift,
-			);
-			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
-		};
-		213E17152E8D125F00B45E6F /* Exceptions for "myTempoGolfUITests" folder in "mytemposwing" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				myTempoGolfUITests.swift,
-				myTempoGolfUITestsLaunchTests.swift,
-			);
-			target = 213E16DE2E8D0FA700B45E6F /* mytemposwing */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -97,17 +82,11 @@
 		};
 		21CFDAD62E8BA5F80003CCC4 /* myTempoGolfTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				213E17142E8D125F00B45E6F /* Exceptions for "myTempoGolfTests" folder in "mytemposwing" target */,
-			);
 			path = myTempoGolfTests;
 			sourceTree = "<group>";
 		};
 		21CFDAE02E8BA5F80003CCC4 /* myTempoGolfUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				213E17152E8D125F00B45E6F /* Exceptions for "myTempoGolfUITests" folder in "mytemposwing" target */,
-			);
 			path = myTempoGolfUITests;
 			sourceTree = "<group>";
 		};
